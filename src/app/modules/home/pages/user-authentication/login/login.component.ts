@@ -35,11 +35,11 @@ export class LoginComponent implements OnInit {
    // }
   }
   onSubmit() {
-    console.warn(this.loginForm.value);
+    //console.warn(this.loginForm.value);
     this._auth.getAuth(this.loginForm.value).subscribe(data => {
       if (data.Success) {
         this._auth.isLoggedIn(data.Success, data.name, data.email, false);
-        this.router.navigate(['createUser']);
+        this.router.navigate(['dataVizualization']);
       } else {
         this._auth.isLoggedIn(data.Success, data.name, data.email, false);
         this.errorMsg = data.Message;
