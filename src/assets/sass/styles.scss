@@ -2,15 +2,18 @@
 @import "base/fonts.scss";
 @import "base/icons.scss";
 @import "base/mixing.scss";
-
+@import "components/buttons.scss";
 
 
 //General Code
 body{ 
   font-family: 'Poppins', sans-serif;
+  font-size: 14px;
 
 }
-
+a{
+  color:#1488C2 !important
+}
 .form-group {
   position: relative;
   margin-bottom: 1.5rem;

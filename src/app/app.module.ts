@@ -10,18 +10,18 @@ import { AuthenticationService } from './core/services/authentication.service';
 import { GetDataFromApiService } from './core/services/get-data-from-api.service';
 import { AuthGuard } from './core/guards/auth.guard';
 import { AppComponent } from './app.component';
-// import { ViewAllDataComponent } from './view-all-data/view-all-data.component';
 import { ChartsModule } from 'ng2-charts';
-// import { BarChartComponent } from './view-all-data/bar-chart/bar-chart.component';
 import { HeaderComponent } from './modules/home/layout/header/header.component';
 import { FooterComponent } from './modules/home/layout/footer/footer.component';
 import { LoginComponent } from './modules/home/pages/user-authentication/login/login.component';
 import { DataVisualizationComponent } from './modules/home/pages/dashboard/data-visualization/data-visualization.component';
 import { BarChartCheckboxComponent } from './modules/home/pages/dashboard/data-visualization/bar-chart-checkbox/bar-chart-checkbox.component';
+import { LayoutComponent } from './modules/home/layout/layout.component';
 const appRoutes: Routes = [
   // { path: 'createUser', component: CreateUserComponent },
   //  { path: 'viewAll', component: ViewAllDataComponent, canActivate: [AuthGuard] },
-   { path: 'dataVizualization', component: DataVisualizationComponent, canActivate: [AuthGuard] },
+  // { path: 'LayoutlandingPage', component: DataVisualizationComponent, canActivate: [AuthGuard] },
+   { path: 'LayoutComponent', component: LayoutComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
@@ -46,7 +46,8 @@ export function provideConfig() {
     // ViewAllDataComponent,
     // BarChartComponent,
     DataVisualizationComponent,
-    BarChartCheckboxComponent
+    BarChartCheckboxComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
