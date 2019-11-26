@@ -85,12 +85,14 @@ mayBe(year){
   this.getDataFromApi.getDataFromTMDB(year).then((response) => {
     response.json().then((data1) => {
 //        console.log(data1);
-        this.wholeArray += data1;
+        this.wholeArray.push(data1.results);
     })
   })
   .catch(err => {
     console.log(err);
   });
+
+  console.log(this.wholeArray);
 }
   
 
